@@ -4,3 +4,212 @@
 @import "utils.scss";
 @import "header.scss";
 @import "footer.scss";
+
+body {
+    background-color: $white;
+}
+
+.container {
+    width: 100%;
+    padding: 0 32px;
+}
+
+
+.wrapper {
+    width: 100%;
+    max-width: 1078px;
+    margin: 30px auto 0 auto;
+    .req-header {
+        width: 100%;
+        height: 50px;
+        background-color: $orange;
+        display: flex;
+        align-items: center;
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btns-wrap {
+            color: $white;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            a {
+                color: inherit;
+                font-size: inherit;
+            }
+        }
+
+        .icon-back {
+            display: block;
+            margin-right: 12px;
+        }
+
+        .icon-arrow-right {
+            display: block;
+            margin: 0 12px;
+        }
+
+        .col {
+            display: flex;
+            align-items: center;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+        }
+
+        .req-title {
+            color: $white;
+        }
+
+        .create-request-btn {
+            background-color: $white;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            display: flex;
+            padding: 8px 16px;
+            color: $orange;
+            font-size: 14px;
+        }
+
+        .icon-plus {
+            display: block;
+            margin-right: 9px;
+        }
+    }
+
+    .req-body {
+        background-color: $gray100;
+        padding: 32px 0;
+        .status-update {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .req-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .status-btn {
+            padding: 8px 32px;
+            font-size: 16px;
+            color: $gray500;
+            border: 1px solid $gray500;
+            border-radius: 28px;
+            &.active {
+                border-color: $orange;
+                color: $orange;
+            }
+        }
+
+        .refresh-btn {
+            width: 38px;
+            height: 38px;
+            background: $white;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .req-cards-list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 65%;
+            flex-grow: 1;
+            gap: 16px;
+            margin-top: 32px;
+            
+            .req-card {
+                width: 45%;
+                flex-grow: 1;
+                background: $white;
+                border: 1px solid $gray400;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            .card-body {
+                padding: 16px;
+            }
+
+            .name {
+                color: $gray200;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .type, .date {
+                color: $gray300;
+                font-size: 14px;
+            }
+
+            .type {
+                margin: 12px 0;
+            }
+
+            .profile-status-wrap {
+                margin-top: 32px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .profile {
+                position: relative;
+                width: 51px;
+                height: 51px;
+                &:not(:last-child) {
+                    &::after {
+                        content: '';
+                        width: 60px;
+                        height: 2px;
+                        background-color: $green;
+                        position: absolute;
+                        top: 50%;
+                        right: -65px;
+                    }
+                }
+            }
+
+            .avatar {
+                display: block;
+                border-radius: 50%;
+                border: 2px solid $white;
+            }
+
+            .status-icon-wrap {
+                position: absolute;
+                bottom: -4px;
+                right: -5px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                border: 2px solid $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card-status-title {
+                font-size: 16px;
+                font-weight: 700;
+                background-color: $green;
+                padding: 12px 0;
+                text-align: center;
+                color: $white;
+            }
+        }
+
+        .req-details {
+            width: 30%;
+            flex-grow: 1;
+        }
+    }
+}
